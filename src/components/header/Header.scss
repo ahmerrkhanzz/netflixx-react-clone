@@ -1,0 +1,18 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    align-content: center;
+    &__logo{
+        width: 6rem;
+        overflow: hidden;
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    &__profile{
+        @extend .header__logo;
+        width: 2.5rem;
+    }
+}

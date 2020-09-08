@@ -1,0 +1,40 @@
+.row {
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  flex-direction: column;
+  &__header {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    h1 {
+      margin: 0;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  &__posters {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 0.8rem 1.5rem;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__poster {
+    margin-right: 0.8rem;
+    object-fit: contain;
+    width: 100%;
+    transition: transform 450ms;
+    max-height: 10rem;
+    &:hover {
+      transform: scale(1.08);
+    }
+  }
+  &__posterLarge{
+      @extend .row__poster;
+      max-height: 20rem;
+  }
+}
