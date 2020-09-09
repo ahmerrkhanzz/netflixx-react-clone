@@ -23,7 +23,6 @@ const Banner = () => {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   };
 
-  console.log(movie);
   return (
     <div
       className="banner"
@@ -40,7 +39,7 @@ const Banner = () => {
           <button className="banner__button">My List</button>
         </div>
         <h2 className="banner__description">
-            {truncate(movie?.overview, 150)}
+          {truncate(movie?.overview, 150)}
         </h2>
       </div>
       <div className="banner--fadeBottom"></div>

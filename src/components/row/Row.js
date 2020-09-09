@@ -13,7 +13,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     height: '390',
     width: '100%',
     moviesplayerVars: {
-      autoPlay: 1
+      autoPlay: true
     }
   }
 
@@ -49,7 +49,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
       <div className="row__posters">
         {movies.map((movie) => (
           <img
-            onClick={handleMovieClick(movie)}
+            onClick={() => handleMovieClick(movie)}
             className={`row__poster ${isLargeRow && "row__posterLarge"}`}
             key={movie.id}
             src={`${baseUrl}${
