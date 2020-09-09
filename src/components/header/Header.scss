@@ -1,18 +1,34 @@
-.header{
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem;
-    align-content: center;
-    &__logo{
-        width: 6rem;
-        overflow: hidden;
-        img{
-            width: 100%;
-            object-fit: contain;
-        }
+.header {
+  position: fixed;
+  padding: 1.5rem;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  height: 30px;
+  z-index: 1;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__black {
+    background-color: #111;
+  }
+  &__logo {
+    left: 20px;
+    width: 80px;
+    position: fixed;
+    object-fit: contain;
+    img {
+      width: 100%;
+      object-fit: contain;
     }
-    &__profile{
-        @extend .header__logo;
-        width: 2.5rem;
-    }
+  }
+  &__profile {
+    @extend .header__logo;
+    right: 20px;
+    width: 30px;
+    left: unset;
+  }
 }
